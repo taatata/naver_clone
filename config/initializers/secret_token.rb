@@ -9,4 +9,19 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-NaverClone::Application.config.secret_key_base = '70e67146f0d637ef3e0bef858ac01a13fac71b9447eb93a079d7cb038e6fbb62bf1fd77ca79e69f02da9e2428e486c8bf4725400aef4757d620ef7684763f634'
+require 'securerandom'
+
+def secure_token
+  token_file = Rails.root.join('.secret')
+  if File.exist?(token_file)
+    # Use the existing token.
+    File.read(token_file).chomp
+  else
+    # Generate a new token and store it in token_file.
+    token = SecureRandom.hex(64)
+    File.write(token_file, token)
+    token
+  end
+end
+
+NaverClone::Application.config.secret_key_base = secure_token

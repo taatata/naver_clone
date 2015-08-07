@@ -14,3 +14,9 @@
 # Ignore all logfiles and tempfiles.
 /log/*.log
 /tmp
+
+# secret
+.secret
+
+# Mac
+.DS_Store
