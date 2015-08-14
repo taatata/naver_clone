@@ -1,0 +1,9 @@
+<h1>まとめ</h1>
+
+<ul class="matomes">
+  <% @matomes.each do |matome| %>
+    <li>
+      <%= link_to matome.content, matome %>
+    </li>
+  <% end %>
+</ul>

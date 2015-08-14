@@ -1,8 +1,9 @@
 NaverClone::Application.routes.draw do
   resources :users
   resources :sessions, only: [:new, :create, :destroy]
+  resources :matomes
 
-  root 'users#new'  # todo: とりあえずroot_pathを生成しておく。
+  root 'matomes#index'
 
   match '/signup',  to: 'users#new',        via: 'get'
   match '/signin',  to: 'sessions#new',     via: 'get'
