@@ -12,11 +12,9 @@ User.create(
   password_confirmation: "foobar"
 )
 
-Matome.create(
-  content: "まとめ記事1",
-  user_id: 2
-)
-Matome.create(
-  content: "まとめ記事2",
-  user_id: 2
-)
+50.times do |i|
+  Matome.create(
+    content: "まとめ記事#{i}",
+    user_id: 2
+  )
+end
