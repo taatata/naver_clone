@@ -1,9 +1,18 @@
 <nav>
-  <ul class="nav pull-right">
+  <ul>
     <% if signed_in? %>
-      <li><%= link_to current_user.name, current_user %></li>
-      <li>お知らせ</li>
-      <li><%= link_to "まとめ作成", new_matome_path %></li>
+      <li>
+        <%= link_to current_user.name, current_user %>
+        <span class="nav-separator">|</span>
+      </li>
+      <li>
+        <%= link_to "お知らせ", "#" %>
+        <span class="nav-separator">|</span>
+      </li>
+      <li>
+        <%= link_to "まとめ作成", new_matome_path %>
+        <span class="nav-separator">|</span>
+      </li>
       <li id="fat-menu" class="dropdown">
         <a class="dropdown-toggle" href="#" data-toggle="dropdown">
           <b class="caret"></b>
@@ -15,10 +24,19 @@
         </ul>
       </li>
     <% else %>
-      <li><%= link_to "まとめ作成", new_matome_path %></li>
-      <li><%= link_to "会員登録 (無料)", signup_path %></li>
-      <li><%= link_to "ログイン", signin_path %></li>
+      <li>
+        <%= link_to "まとめ作成", new_matome_path %>
+        <span class="nav-separator">|</span>
+      </li>
+      <li>
+        <%= link_to "会員登録 (無料)", signup_path %>
+        <span class="nav-separator">|</span>
+      </li>
+      <li>
+        <%= link_to "ログイン", signin_path %>
+        <span class="nav-separator">|</span>
+      </li>
     <% end %>
-    </ul>
+  </ul>
 </nav>
 

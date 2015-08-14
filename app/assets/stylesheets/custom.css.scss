@@ -1,9 +1,44 @@
 @import "bootstrap";
 
+a {
+  text-decoration: none;
+}
+
+ol, ul {
+  list-style: none;
+}
+
 .debug_dump {
   clear: both;
   float: left;
   width: 100%;
   margin-top: 45px;
   box-sizing: border-box;
+}
+
+#title {
+  text-align: center;
+}
+
+nav {
+  ul {
+    position: absolute;
+    width: 1010px;
+    margin: 0 auto;
+    text-align: right;
+    li {
+      display: inline-block;
+      span.nav-separator {
+        display: inline-block;
+        width: 0;
+        overflow: hidden;
+        border-left-width: 1px;
+        border-left-style: solid;
+        vertical-align: -1px;
+        height: 11px;
+        margin: 0 9px 0 11px;
+        border-left-color: #eaeaea;
+      }
+    }
+  }
 }
