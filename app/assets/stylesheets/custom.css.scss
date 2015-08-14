@@ -20,6 +20,11 @@ ol, ul {
   text-align: center;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  font-size: 100%;
+  font-weight: normal;
+}
+
 nav {
   ul {
     position: absolute;
@@ -40,5 +45,11 @@ nav {
         border-left-color: #eaeaea;
       }
     }
+  }
+}
+
+#matomes-index {
+  h2 {
+    font-weight: bold;
   }
 }

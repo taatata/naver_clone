@@ -1,9 +1,11 @@
-<h1>まとめ</h1>
+<div id="matomes-index">
+  <h2>注目まとめ</h2>
+  <ul class="matomes">
+    <% @matomes.each do |matome| %>
+      <li>
+        <%= link_to matome.content, matome %>
+      </li>
+    <% end %>
+  </ul>
 
-<ul class="matomes">
-  <% @matomes.each do |matome| %>
-    <li>
-      <%= link_to matome.content, matome %>
-    </li>
-  <% end %>
-</ul>
+</div>
