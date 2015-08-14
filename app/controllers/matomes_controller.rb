@@ -2,7 +2,7 @@ class MatomesController < ApplicationController
   before_action :signed_in_user, only: [:new, :create, :edit, :update, :destroy]
 
   def index
-    @matomes = Matome.all
+    @matomes = Matome.limit(1000).paginate(page: params[:page], per_page: 20)
   end
 
   def show
