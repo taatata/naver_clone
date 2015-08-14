@@ -1,5 +1,5 @@
 class MatomesController < ApplicationController
-  before_action :signed_in_user, only: [:create, :destroy]
+  before_action :signed_in_user, only: [:new, :create, :edit, :update, :destroy]
 
   def index
     @matomes = Matome.all
@@ -10,7 +10,7 @@ class MatomesController < ApplicationController
   end
 
   def new
-    @matome = Matome.new
+    @matome = current_user.matomes.build if signed_in?
   end
 
   def create
