@@ -1,4 +1,5 @@
 class MatomesController < ApplicationController
+  before_action :signed_in_user, only: [:create, :destroy]
 
   def index
     @matomes = Matome.all
@@ -13,7 +14,7 @@ class MatomesController < ApplicationController
   end
 
   def create
-    @matome = Matome.new(matome_params)
+    @matome = current_user.matomes.build(matome_params)
     if @matome.save
       redirect_to @matme
     else
