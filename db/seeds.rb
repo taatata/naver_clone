@@ -11,3 +11,12 @@ User.create(
   password:              "foobar",
   password_confirmation: "foobar"
 )
+
+Matome.create(
+  content: "まとめ記事1",
+  user_id: 2
+)
+Matome.create(
+  content: "まとめ記事2",
+  user_id: 2
+)
