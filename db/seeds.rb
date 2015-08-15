@@ -14,7 +14,8 @@ User.create(
 
 50.times do |i|
   Matome.create(
-    content: "まとめ記事#{i}",
+    title: "まとめ記事タイトル#{i}",
+    content: "まとめ記事コンテンツ#{i}ですよ。",
     user_id: 2
   )
 end

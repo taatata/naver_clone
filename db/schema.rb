@@ -11,13 +11,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150811181327) do
+ActiveRecord::Schema.define(version: 20150814162223) do
 
   create_table "matomes", force: true do |t|
     t.string   "content"
     t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "title"
   end
 
   add_index "matomes", ["user_id", "created_at"], name: "index_matomes_on_user_id_and_created_at"
