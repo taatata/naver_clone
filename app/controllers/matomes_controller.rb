@@ -36,6 +36,6 @@ class MatomesController < ApplicationController
   private
 
     def matome_params
-      params.require(:matome).permit(:content)
+      params.require(:matome).permit(:title, :content)
     end
 end
