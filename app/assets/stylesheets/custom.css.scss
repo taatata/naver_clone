@@ -29,24 +29,20 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: normal;
 }
 
-nav {
-  ul {
-    position: absolute;
-    width: 1010px;
-    margin: 0 auto;
-    text-align: right;
-    li {
-      display: inline-block;
-      span.nav-separator {
+.lyHeadNav {
+  nav {
+    ul.MdHeadUtil01 {
+      position: absolute;
+      width: 1010px;
+      margin: 0 auto;
+      text-align: right;
+      li.mdHeadUtil01Li {
         display: inline-block;
-        width: 0;
-        overflow: hidden;
-        border-left-width: 1px;
-        border-left-style: solid;
-        vertical-align: -1px;
-        height: 11px;
-        margin: 0 9px 0 11px;
-        border-left-color: #eaeaea;
+
+        ul.mdHeadUtil01Sub {
+          text-align: left;
+          width: 98px;
+        }
       }
     }
   }
@@ -94,6 +90,18 @@ nav {
       font-size: 11px;
     }
   }
+}
+
+.MdHeadSeparator01 {
+  display: inline-block;
+  width: 0;
+  overflow: hidden;
+  border-left-width: 1px;
+  border-left-style: solid;
+  vertical-align: -1px;
+  height: 11px;
+  margin: 0 9px 0 11px;
+  border-left-color: #eaeaea;
 }
 
 .MdFootSeparator01 {
