@@ -16,7 +16,7 @@ class MatomesController < ApplicationController
   def create
     @matome = current_user.matomes.build(matome_params)
     if @matome.save
-      redirect_to @matme
+      redirect_to @matome
     else
       render 'new'
     end
