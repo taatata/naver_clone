@@ -1,5 +1,9 @@
 @import "bootstrap";
 
+body {
+  font: 12px/1.5 arial,sans-serif;
+}
+
 a {
   text-decoration: none;
 }
@@ -51,5 +55,67 @@ nav {
 #matomes-index {
   h2 {
     font-weight: bold;
+  }
+}
+
+.LyFoot {
+  width: 100%;
+  border-top: 1px solid #e7e7e7;
+
+  .lyFootInner {
+    width: 960px;
+    margin: 0 auto;
+    padding: 25px 0;
+  }
+}
+
+.MdHide {
+  position: absolute;
+  left: -9999px;
+}
+
+.MdNaverLink01 {
+  &:after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+
+  .mdNaverLink01Ul {
+    float: left;
+    line-height: 1;
+  }
+
+  .mdNaverLink01Li {
+    display: inline;
+
+    a {
+      color: #333;
+      font-size: 11px;
+    }
+  }
+}
+
+.MdFootSeparator01 {
+  display: inline-block;
+  width: 0;
+  overflow: hidden;
+  border-left-width: 1px;
+  border-left-style: solid;
+  vertical-align: -1px;
+  height: 11px;
+  margin: 0 9px 0 11px;
+  border-left-color: #eaeaea;
+}
+
+.MdCopyright01 {
+  float: right;
+  line-height: 1;
+  color: #333;
+  font-family: Tahoma;
+  font-size: 11px;
+
+  b {
+    font-weight: normal;
   }
 }
