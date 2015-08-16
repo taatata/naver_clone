@@ -1,15 +1,23 @@
 @import "bootstrap";
 
 body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
   font: 12px/1.5 arial,sans-serif;
 }
 
 a {
   text-decoration: none;
+  cursor: pointer;
 }
 
 ol, ul {
   list-style: none;
+}
+
+p, ol, ul, td {
+  font-family: arial, sans-serif;
 }
 
 .debug_dump {
@@ -20,13 +28,42 @@ ol, ul {
   box-sizing: border-box;
 }
 
-#title {
-  text-align: center;
-}
-
 h1, h2, h3, h4, h5, h6 {
   font-size: 100%;
   font-weight: normal;
+}
+
+.LyWrap {
+  margin: 0;
+  padding: 0;
+
+  .lyWrapInner {
+    width: 100%;
+    min-width: 960px;
+  }
+}
+
+.LyTop {
+  padding-top: 41px;
+
+  .lyTopInner {
+    width: 960px;
+    margin: 0 auto;
+    padding-bottom: 15px;
+  }
+}
+
+.MdHeadUtil01 {
+  width: 1010px;
+  margin: 0 auto;
+}
+
+.MdHeadUtil01 {
+  top: 7px;
+}
+
+.MdHeadTtl01 {
+  text-align: center;
 }
 
 .lyHeadNav {
@@ -48,9 +85,77 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+.LyContents {
+  width: 100%;
+  padding-bottom: 20px;
+
+  .lyContentsWrap {
+   width: 960px;
+   margin: 0 auto;
+  }
+}
+
+.LyMain {
+  float: left;
+  width: 635px;
+  padding-bottom: 40px;
+
+  .ArMain01 {
+    .MdPagination03 {
+      margin-bottom: 40px;
+    }
+  }
+}
+
+.MdPagination03 {
+  line-height: 1.2;
+  margin: 30px 0;
+  font-size: 16px;
+  text-align: center;
+}
+
 #matomes-index {
   h2 {
     font-weight: bold;
+  }
+}
+
+.MdMTMEditHead01.mdMTMEditHead01Fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.MdMTMEditHead01 {
+  position: absolute;
+  top: 48px;
+  left: 0;
+  z-index: 500;
+  width: 100%;
+  min-width: 960px;
+  height: 41px;
+  border-bottom: 1px solid #e7e7e7;
+  background: #f9f9f9;
+
+  .mdMTMEditHead01Inner {
+    position: relative;
+    width: 960px;
+    margin: 0 auto;
+  }
+
+  .mdMTMEditHead01Ttl {
+    line-height: 41px;
+    color: #000;
+    font-weight: bold;
+    font-size: 14px;
+  }
+
+  .mdMTMEditHead01Btn {
+    position: absolute;
+    top: 8px;
+    right: 6px;
+    width: 240px;
+    text-align: right;
   }
 }
 
@@ -125,5 +230,39 @@ h1, h2, h3, h4, h5, h6 {
 
   b {
     font-weight: normal;
+  }
+}
+
+.MdMTMWidgetUtil01 {
+  position: relative;
+  line-height: 1.2;
+  overflow: hidden;
+  margin: 0 0 10px;
+  padding: 15px 0 0 5px;
+  vertical-align: middle;
+
+  .mdMTMWidgetUtil01Ttl {
+    overflow: hidden;
+    margin: 0 25px 0 0;
+    //padding: 0 0 0 81px;
+    display: inline-block;
+  }
+
+  .mdMTMWidgetUtil01List {
+    display: inline-block;
+  }
+
+  .mdMTMWidgetUtil01Li {
+    display: inline-block;
+    margin: 0 25px 0 0;
+  }
+
+  .mdMTMWidgetUtil01BtnFV {
+    position: absolute;
+    top: 13px;
+    right: 5px;
+    width: 176px;
+    height: 14px;
+    letter-spacing: -1px;
   }
 }

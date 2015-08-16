@@ -1,11 +1,70 @@
-<%= form_for(@matome) do |f| %>
-  <%= render 'shared/error_messages', object: f.object %>
+<div class="LyContents MdCF">
+  <div class="LyTop" role="main">
+    <div class="lyTopInner">
+      <div class="MdHeading03">
+        <form action=""></form>
+      </div>
+      <div class="MdMTMWidgetUtil01">
+        <p class="mdMTMWidgetUtil01Ttl">アイテムを追加</p>
+        <ul class="mdMTMWidgetUtil01List">
+          <li class="mdMTMWidgetUtil01Li"><a class="mdMTMWidgetUtil01BtnLink" >リンク</a></li>
+          <li class="mdMTMWidgetUtil01Li"><a class="mdMTMWidgetUtil01BtnImg" >画像</a></li>
+          <li class="mdMTMWidgetUtil01Li"><a class="mdMTMWidgetUtil01BtnVideo" >動画</a></li>
+          <li class="mdMTMWidgetUtil01Li"><a class="mdMTMWidgetUtil01BtnQuote" >引用</a></li>
+          <li class="mdMTMWidgetUtil01Li"><a class="mdMTMWidgetUtil01BtnTwitter" >Twitter</a></li>
+          <li class="mdMTMWidgetUtil01Li"><a class="mdMTMWidgetUtil01BtnTxt" >テキスト</a></li>
+          <li class="mdMTMWidgetUtil01Li"><a class="mdMTMWidgetUtil01BtnTtl" >見出し</a></li>
+          <li class="mdMTMWidgetUtil01Li"><a class="mdMTMWidgetUtil01BtnFV" >お気に入りからアイテムを追加</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="lyContentsWrap MdCF">
+    <div class="LyMain" role="main">
+      <div class="ArMain01">
+        <div class="MdMTMWidgetList01 ui-sortable">
+          <div class="MdMTMWidget01 ExSelected">
+            <%= form_for(@matome) do |f| %>
+              <%= render 'shared/error_messages', object: f.object %>
 
-  <%= f.label :title %>
-  <%= f.text_field :title, size: "50", placeholder: "まとめタイトルを入力 (50文字以内)" %>
+              <%= f.label :title %>
+              <%= f.text_field :title, size: "50", placeholder: "まとめタイトルを入力 (50文字以内)" %>
 
-  <%= f.label :content %>
-  <%= f.text_area :content, placeholder: "*テキストを入力" %>
+              <%= f.label :content %>
+              <%= f.text_area :content, placeholder: "*テキストを入力" %>
 
-  <%= f.submit "作成", class: "btn btn-large btn-primary" %>
-<% end %>
+              <%= f.submit "作成", class: "btn btn-large btn-primary" %>
+            <% end %>
+          </div>
+          <div class="MdMTMWidget01">
+            <!-- midasi -->
+          </div>
+        </div>
+        <div class="MdPagination03">
+          <strong>1</strong>
+        </div>
+      </div>
+    </div>
+    <div class="LySub">
+    </div>
+  </div>
+</div>
+
+<div class="MdMTMEditHead01">
+  <div class="mdMTMEditHead01Inner">
+    <p class="mdMTMEditHead01Ttl">まとめ作成</p>
+    <p class="mdMTMEditHead01Btn">
+    <span class="MdBtn01SaveDraft01">
+      <input class="mdBtn01SaveDraft01Btn" type="button" value="下書き保存">
+    </span>
+    <span class="MdBtn01Publish01">
+      <input class="mdBtn01Publish01Btn" type="button" value="公開">
+    </span>
+    <span class="MdBtn01Cancel02">
+      <a class="mdBtn01Cancel02Btn" href="#">キャンセル</a>
+    </span>
+    </p>
+  </div>
+</div>
+
+

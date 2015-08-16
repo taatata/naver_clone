@@ -1,12 +1,15 @@
 <header>
-  <h1 id="title">
-    <%= link_to "NAVER まとめ", root_path %>
-  </h1>
   <div class="LyHead">
     <div class="lyHeadWrap">
-      <div class="lyHeadInner MdHeadTtlGroup01" role="banner"></div>
-      <form action=""></form>
-      <%= render 'layouts/nav' %>
+      <div class="lyHeadInner">
+        <div class="MdHeadTtlGroup01" role="banner">
+          <h1 class="MdHeadTtl01">
+            <%= link_to "NAVER まとめ", root_path, class: "mdHeadTtl01Img", title: "NAVER まとめ" %>
+          </h1>
+        </div>
+        <form action=""></form>
+        <%= render 'layouts/nav' %>
+      </div>
     </div>
   </div>
 </header>
