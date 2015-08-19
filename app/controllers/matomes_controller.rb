@@ -11,6 +11,7 @@ class MatomesController < ApplicationController
 
   def new
     @matome = current_user.matomes.build if signed_in?
+    @midasi = @matome.midasis.build
   end
 
   def create

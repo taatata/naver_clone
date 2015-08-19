@@ -46,8 +46,10 @@
             <div class="MdMTMWidget01 ExSelected hide">
             </div>
             <div class="MdMTMWidget01 ExSelected hide">
-            </div>
-            <div class="MdMTMWidget01 ExSelected hide">
+              <%= form_for(@midasi) do |f| %>
+                <%= f.text_area :content, placeholder: "見出しを入力" %>
+                <%= f.submit "保存", class: "mdBtn01Save02Btn" %>
+              <% end %>
             </div>
           </ul>
           <div class="MdMTMWidget01">

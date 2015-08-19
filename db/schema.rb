@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150814162223) do
+ActiveRecord::Schema.define(version: 20150819170500) do
 
   create_table "matomes", force: true do |t|
     t.string   "content"
@@ -22,6 +22,13 @@ ActiveRecord::Schema.define(version: 20150814162223) do
   end
 
   add_index "matomes", ["user_id", "created_at"], name: "index_matomes_on_user_id_and_created_at"
+
+  create_table "midasis", force: true do |t|
+    t.string   "content"
+    t.integer  "matome_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "users", force: true do |t|
     t.string   "name"
