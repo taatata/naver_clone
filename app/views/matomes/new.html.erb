@@ -7,13 +7,13 @@
       <div class="MdMTMWidgetUtil01">
         <p class="mdMTMWidgetUtil01Ttl">アイテムを追加</p>
         <ul class="mdMTMWidgetUtil01List">
-          <li class="mdMTMWidgetUtil01Li"><a class="mdMTMWidgetUtil01BtnLink" >リンク</a></li>
-          <li class="mdMTMWidgetUtil01Li"><a class="mdMTMWidgetUtil01BtnImg" >画像</a></li>
-          <li class="mdMTMWidgetUtil01Li"><a class="mdMTMWidgetUtil01BtnVideo" >動画</a></li>
-          <li class="mdMTMWidgetUtil01Li"><a class="mdMTMWidgetUtil01BtnQuote" >引用</a></li>
-          <li class="mdMTMWidgetUtil01Li"><a class="mdMTMWidgetUtil01BtnTwitter" >Twitter</a></li>
-          <li class="mdMTMWidgetUtil01Li"><a class="mdMTMWidgetUtil01BtnTxt" >テキスト</a></li>
-          <li class="mdMTMWidgetUtil01Li"><a class="mdMTMWidgetUtil01BtnTtl" >見出し</a></li>
+          <li class="mdMTMWidgetUtil01Li"><a href="#" class="mdMTMWidgetUtil01BtnLink" >リンク</a></li>
+          <li class="mdMTMWidgetUtil01Li"><a href="#" class="mdMTMWidgetUtil01BtnImg" >画像</a></li>
+          <li class="mdMTMWidgetUtil01Li"><a href="#" class="mdMTMWidgetUtil01BtnVideo" >動画</a></li>
+          <li class="mdMTMWidgetUtil01Li"><a href="#" class="mdMTMWidgetUtil01BtnQuote" >引用</a></li>
+          <li class="mdMTMWidgetUtil01Li"><a href="#" class="mdMTMWidgetUtil01BtnTwitter" >Twitter</a></li>
+          <li class="mdMTMWidgetUtil01Li"><a href="#" class="mdMTMWidgetUtil01BtnTxt" >テキスト</a></li>
+          <li class="mdMTMWidgetUtil01Li"><a href="#" class="mdMTMWidgetUtil01BtnTtl" >見出し</a></li>
           <li class="mdMTMWidgetUtil01Li"><a class="mdMTMWidgetUtil01BtnFV" >お気に入りからアイテムを追加</a></li>
         </ul>
       </div>
@@ -23,19 +23,33 @@
     <div class="LyMain" role="main">
       <div class="ArMain01">
         <div class="MdMTMWidgetList01 ui-sortable">
-          <div class="MdMTMWidget01 ExSelected">
-            <%= form_for(@matome) do |f| %>
-              <%= render 'shared/error_messages', object: f.object %>
+          <ul class="tab-contents">
+            <div class="MdMTMWidget01 ExSelected hide">
+              <%= form_for(@matome) do |f| %>
+                <%= render 'shared/error_messages', object: f.object %>
 
-              <%= f.label :title %>
-              <%= f.text_field :title, size: "50", placeholder: "まとめタイトルを入力 (50文字以内)" %>
+                <%= f.label :title %>
+                <%= f.text_field :title, size: "50", placeholder: "まとめタイトルを入力 (50文字以内)" %>
 
-              <%= f.label :content %>
-              <%= f.text_area :content, placeholder: "*テキストを入力" %>
+                <%= f.label :content %>
+                <%= f.text_area :content, placeholder: "*テキストを入力" %>
 
-              <%= f.submit "作成", class: "btn btn-large btn-primary" %>
-            <% end %>
-          </div>
+                <%= f.submit "作成", class: "btn btn-large btn-primary" %>
+              <% end %>
+            </div>
+            <div class="MdMTMWidget01 ExSelected hide">
+            </div>
+            <div class="MdMTMWidget01 ExSelected hide">
+            </div>
+            <div class="MdMTMWidget01 ExSelected hide">
+            </div>
+            <div class="MdMTMWidget01 ExSelected hide">
+            </div>
+            <div class="MdMTMWidget01 ExSelected hide">
+            </div>
+            <div class="MdMTMWidget01 ExSelected hide">
+            </div>
+          </ul>
           <div class="MdMTMWidget01">
             <!-- midasi -->
           </div>
