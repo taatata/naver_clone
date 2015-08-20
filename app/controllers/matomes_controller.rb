@@ -10,8 +10,10 @@ class MatomesController < ApplicationController
   end
 
   def new
-    @matome = current_user.matomes.build if signed_in?
+    @matome = current_user.matomes.build
+    @matome.save(validate: false)
     @midasi = @matome.midasis.build
+    @matome_id = @matome.id
   end
 
   def create
@@ -24,6 +26,9 @@ class MatomesController < ApplicationController
   end
 
   def edit
+    @matome = Matome.find(params[:id])
+    @midasi = @matome.midasis.build
+    @matome_id = @matome.id
   end
 
   def update
