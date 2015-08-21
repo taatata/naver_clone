@@ -5,7 +5,7 @@
 $(function() {
   $(".mdMTMWidgetUtil01Li").click(function() {
     var index = $('.mdMTMWidgetUtil01Li').index(this);
-    $('.tab-contents div').addClass('hide');
-    $('.tab-contents div').eq(index).removeClass('hide');
+    $('.ExSelected').addClass('hide');
+    $('.ExSelected').eq(index).removeClass('hide');
   });
 });

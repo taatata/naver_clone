@@ -23,38 +23,35 @@
     <div class="LyMain" role="main">
       <div class="ArMain01">
         <div class="MdMTMWidgetList01 ui-sortable">
-          <ul class="tab-contents">
-            <div class="MdMTMWidget01 ExSelected hide">
-              <%= form_for(@matome) do |f| %>
-                <%= render 'shared/error_messages', object: f.object %>
+          <div class="MdMTMWidget01 ExSelected hide">
+            <%= form_for(@matome) do |f| %>
+              <%= render 'shared/error_messages', object: f.object %>
 
-                <%= f.label :title %>
-                <%= f.text_field :title, size: "50", placeholder: "まとめタイトルを入力 (50文字以内)" %>
+              <%= f.label :title %>
+              <%= f.text_field :title, size: "50", placeholder: "まとめタイトルを入力 (50文字以内)" %>
 
-                <%= f.label :content %>
-                <%= f.text_area :content, placeholder: "*テキストを入力" %>
+              <%= f.label :content %>
+              <%= f.text_area :content, placeholder: "*テキストを入力" %>
 
-                <%= f.submit "作成", class: "btn btn-large btn-primary" %>
-              <% end %>
-            </div>
-            <div class="MdMTMWidget01 ExSelected hide">
-            </div>
-            <div class="MdMTMWidget01 ExSelected hide">
-            </div>
-            <div class="MdMTMWidget01 ExSelected hide">
-            </div>
-            <div class="MdMTMWidget01 ExSelected hide">
-            </div>
-            <div class="MdMTMWidget01 ExSelected hide">
-              <%= form_for(@midasi) do |f2| %>
-                <%= f2.hidden_field :matome_id, value: @matome_id %>
-                <%= f2.text_area :content, placeholder: "見出しを入力" %>
-                <%= f2.submit "保存", class: "mdBtn01Save02Btn" %>
-              <% end %>
-            </div>
-          </ul>
-          <div class="MdMTMWidget01">
-            <!-- midasi -->
+              <%= f.submit "作成", class: "btn btn-large btn-primary" %>
+            <% end %>
+          </div>
+          <div class="MdMTMWidget01 ExSelected hide">
+          </div>
+          <div class="MdMTMWidget01 ExSelected hide">
+          </div>
+          <div class="MdMTMWidget01 ExSelected hide">
+          </div>
+          <div class="MdMTMWidget01 ExSelected hide">
+          </div>
+          <div class="MdMTMWidget01 ExSelected hide">
+          </div>
+          <div class="MdMTMWidget01 ExSelected hide">
+            <%= form_for(@midasi, remote: true) do |f2| %>
+              <%= f2.hidden_field :matome_id, value: @matome_id %>
+              <%= f2.text_area :content, placeholder: "見出しを入力" %>
+              <%= f2.submit "保存", class: "mdBtn01Save02Btn" %>
+            <% end %>
           </div>
         </div>
         <div class="MdPagination03">
