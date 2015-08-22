@@ -11,7 +11,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150819170500) do
+ActiveRecord::Schema.define(version: 20150822100728) do
+
+  create_table "blocks", force: true do |t|
+    t.integer  "matome_id"
+    t.integer  "order"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "matomes", force: true do |t|
     t.string   "content"
