@@ -2,6 +2,7 @@ NaverClone::Application.routes.draw do
   resources :users
   resources :sessions, only: [:new, :create, :destroy]
   resources :matomes
+  resources :blocks
   resources :midasis
 
   root 'matomes#index'

@@ -1,6 +1,7 @@
 class MidasisController < ApplicationController
   def create
     @midasi_new = Midasi.new(midasi_params)
+    @midasi_new.block_id = @block.id
     @midasi_new.save
     @matome = Matome.find(@midasi_new.matome_id)
     @midasi = @matome.midasis.build # new for form
@@ -13,6 +14,6 @@ class MidasisController < ApplicationController
   private
 
     def midasi_params
-      params.require(:midasi).permit(:content, :matome_id)
+      params.require(:midasi).permit(:content)
     end
 end

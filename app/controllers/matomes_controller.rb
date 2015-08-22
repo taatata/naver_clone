@@ -10,16 +10,22 @@ class MatomesController < ApplicationController
   end
 
   def new
+    #@matome = current_user.matomes.build
+    #@matome.save(validate: false)
+    #@block = @matome.blocks.build
+    #@midasi = @block.build_midasi
     @matome = current_user.matomes.build
-    @matome.save(validate: false)
-    @midasi = @matome.midasis.build
-    @matome_id = @matome.id
+    @block = @matome.blocks.build
+    @midasi = @block.build_midasi
   end
 
   def create
     @matome = current_user.matomes.build(matome_params)
-    if @matome.save
-      redirect_to @matome
+    if @matome.save!
+      respond_to do |format|
+        format.html { redirect_to edit_matome_url(id: @matome.id)}
+        format.js
+      end
     else
       render 'new'
     end
@@ -27,13 +33,17 @@ class MatomesController < ApplicationController
 
   def edit
     @matome = Matome.find(params[:id])
-    @midasi = @matome.midasis.build
-    @matome_id = @matome.id
+    @block = @matome.blocks.build
+    @midasi = @block.build_midasi
   end
 
   def update
-    if @matome.update_attributes(matome_params)
-      redirect_to @matome
+    @matome = Matome.find(params[:id])
+    if @matome.update_attributes!(matome_params)
+      respond_to do |format|
+        format.html { redirect_to edit_matome_url(id: @matome.id)}
+        format.js
+      end
     else
       render 'edit'
     end
@@ -42,6 +52,8 @@ class MatomesController < ApplicationController
   private
 
     def matome_params
-      params.require(:matome).permit(:title, :content)
+      params.require(:matome).permit(:title, :content, blocks_attributes:
+                                     [:id, :order,
+                                      midasi_attributes: [:id, :content]])
     end
 end
