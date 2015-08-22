@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150822100728) do
+ActiveRecord::Schema.define(version: 20150822102835) do
 
   create_table "blocks", force: true do |t|
     t.integer  "matome_id"
@@ -32,7 +32,7 @@ ActiveRecord::Schema.define(version: 20150822100728) do
 
   create_table "midasis", force: true do |t|
     t.string   "content"
-    t.integer  "matome_id"
+    t.integer  "block_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
