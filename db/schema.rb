@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150822102835) do
+ActiveRecord::Schema.define(version: 20150823090930) do
 
   create_table "blocks", force: true do |t|
     t.integer  "matome_id"
@@ -31,6 +31,13 @@ ActiveRecord::Schema.define(version: 20150822102835) do
   add_index "matomes", ["user_id", "created_at"], name: "index_matomes_on_user_id_and_created_at"
 
   create_table "midasis", force: true do |t|
+    t.string   "content"
+    t.integer  "block_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "texts", force: true do |t|
     t.string   "content"
     t.integer  "block_id"
     t.datetime "created_at"

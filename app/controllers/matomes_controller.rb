@@ -1,4 +1,5 @@
 class MatomesController < ApplicationController
+
   before_action :signed_in_user, only: [:new, :create, :edit, :update, :destroy]
 
   def index
@@ -12,7 +13,6 @@ class MatomesController < ApplicationController
   def new
     @matome = current_user.matomes.build
     @block = @matome.blocks.build
-    @midasi = @block.build_midasi
   end
 
   def create
@@ -30,7 +30,6 @@ class MatomesController < ApplicationController
   def edit
     @matome = Matome.find(params[:id])
     @block = @matome.blocks.build
-    @midasi = @block.build_midasi
   end
 
   def update
@@ -48,8 +47,12 @@ class MatomesController < ApplicationController
   private
 
     def matome_params
-      params.require(:matome).permit(:title, :content, blocks_attributes:
-                                     [:id, :order,
-                                      midasi_attributes: [:id, :content]])
+      params
+      .require(:matome)
+      .permit(:title, :content,
+              blocks_attributes: [:id, :order,
+                                    midasi_attributes: [:id, :content],
+                                    text_attributes: [:id, :content]])
     end
+
 end
