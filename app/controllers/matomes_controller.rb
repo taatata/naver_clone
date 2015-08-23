@@ -12,7 +12,9 @@ class MatomesController < ApplicationController
 
   def new
     @matome = current_user.matomes.build
-    @block = @matome.blocks.build
+    if @matome.save
+      redirect_to edit_matome_url(id: @matome.id)
+    end
   end
 
   def create

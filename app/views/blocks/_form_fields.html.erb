@@ -1,5 +1,4 @@
 <%= m.fields_for :blocks, @block do |b| %>
-  <%= b.text_field :order %>
 
   <%= render "#{name}/form_fields", b: b %>
 <% end %>

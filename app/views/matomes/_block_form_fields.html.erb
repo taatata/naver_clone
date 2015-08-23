@@ -1,6 +1,4 @@
 <%= form_for(@matome, remote: true) do |m| %>
-  <%= m.text_field :title %>
-  <%= m.text_field :content %>
 
   <%= render 'blocks/form_fields', m: m, name: name %>
 
