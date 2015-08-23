@@ -52,7 +52,11 @@
               <%= render 'matomes/block_form_fields', name: 'midasis' %>
             </div>
           </div>
-          <div class="matomecontents"></div>
+          <div class="matomecontents">
+            <% @matome.blocks.order(:order).each do |b| %>
+              <%= render 'blocks/edit_block', block: b %>
+            <% end %>
+          </div>
         </div>
         <div class="MdPagination03">
           <strong></strong>

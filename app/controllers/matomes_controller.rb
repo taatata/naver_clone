@@ -36,6 +36,9 @@ class MatomesController < ApplicationController
 
   def update
     @matome = Matome.find(params[:id])
+    @matome.blocks.each do |b|
+      b.order += 1
+    end
     if @matome.update_attributes!(matome_params)
       respond_to do |format|
         format.html { redirect_to edit_matome_url(id: @matome.id)}

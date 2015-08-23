@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150823090930) do
+ActiveRecord::Schema.define(version: 20150823221259) do
 
   create_table "blocks", force: true do |t|
     t.integer  "matome_id"
