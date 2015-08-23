@@ -10,10 +10,6 @@ class MatomesController < ApplicationController
   end
 
   def new
-    #@matome = current_user.matomes.build
-    #@matome.save(validate: false)
-    #@block = @matome.blocks.build
-    #@midasi = @block.build_midasi
     @matome = current_user.matomes.build
     @block = @matome.blocks.build
     @midasi = @block.build_midasi

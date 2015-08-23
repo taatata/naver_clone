@@ -47,19 +47,7 @@
           <div class="MdMTMWidget01 ExSelected hide">
           </div>
           <div class="MdMTMWidget01 ExSelected hide">
-            <%= form_for(@matome, remote: true) do |m| %>
-              <%= m.text_field :title %>
-              <%= m.text_field :content %>
-
-              <%= m.fields_for :blocks, @block do |b| %>
-                <%= b.text_field :order %>
-
-                <%= b.fields_for :midasi, @midasi do |mi| %>
-                  <%= mi.text_field :content %>
-                <% end %>
-              <% end %>
-              <%= m.submit "保存" %>
-            <% end %>
+            <%= render 'matomes/block_form_fields' %>
           </div>
         </div>
         <div class="MdPagination03">
