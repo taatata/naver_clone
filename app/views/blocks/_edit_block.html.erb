@@ -1,4 +1,5 @@
 <div class="MdMTMWidget01 mdMTMWidgetUtil01TypeTtl MdEditable02">
+  <%= render 'blocks/updown_block_form' %>
   <%= render(has_one_name(@matome.blocks.last) + '/block', block: @matome.blocks.last) %>
-  <%= render 'shared/update_block_form' %>
+  <%= render 'blocks/edit_block_form' %>
 </div>
