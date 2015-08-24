@@ -1,6 +1,9 @@
 class Matome < ActiveRecord::Base
   belongs_to :user
+
   has_many :blocks
+
+  mount_uploader :image, ImageUploader
 
   accepts_nested_attributes_for :blocks
 

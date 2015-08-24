@@ -7,6 +7,16 @@
 
           <%= f.text_field :title, placeholder: "まとめタイトルを入力 (50文字以内)" %>
           <%= f.text_area :content, placeholder: "*テキストを入力" %>
+          <% if @matome.image? %>
+            <%= image_tag @matome.image.url %>
+          <% end %>
+          <%= f.file_field :image %>
+          <%= f.hidden_field :image_cache %>
+
+          <% if @matome.persisted? && @matome.image? %>
+            <%= f.check_box :remove_image %>
+            画像を削除
+          <% end %>
 
           <div class="MdMTMEditHead01">
             <div class="mdMTMEditHead01Inner">

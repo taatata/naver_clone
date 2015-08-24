@@ -54,7 +54,7 @@ class MatomesController < ApplicationController
     def matome_params
       params
       .require(:matome)
-      .permit(:title, :content,
+      .permit(:title, :content, :image,
               blocks_attributes: [:id, :order,
                                     midasi_attributes: [:id, :content],
                                     text_attributes: [:id, :content]])
