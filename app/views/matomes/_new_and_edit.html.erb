@@ -2,7 +2,29 @@
   <div class="LyTop" role="main">
     <div class="lyTopInner">
       <div class="MdHeading03">
-        <form action=""></form>
+        <%= form_for(@matome) do |f| %>
+          <%= render 'shared/error_messages', object: f.object %>
+
+          <%= f.text_field :title, placeholder: "まとめタイトルを入力 (50文字以内)" %>
+          <%= f.text_area :content, placeholder: "*テキストを入力" %>
+
+          <div class="MdMTMEditHead01">
+            <div class="mdMTMEditHead01Inner">
+              <p class="mdMTMEditHead01Ttl">まとめ作成</p>
+              <p class="mdMTMEditHead01Btn">
+              <span class="MdBtn01SaveDraft01">
+                <%= f.submit '下書きを保存', class: 'mdBtn01SaveDraft01Btn' %>
+              </span>
+              <span class="MdBtn01Publish01">
+                <%= f.submit '公開', class: 'mdBtn01Publish01Btn' %>
+              </span>
+              <span class="MdBtn01Cancel02">
+                <a class="mdBtn01Cancel02Btn" >キャンセル</a>
+              </span>
+              </p>
+            </div>
+          </div>
+        <% end %>
       </div>
       <div class="MdMTMWidgetUtil01">
         <p class="mdMTMWidgetUtil01Ttl">アイテムを追加</p>
@@ -25,17 +47,6 @@
         <div class="MdMTMWidgetList01 ui-sortable">
           <div class="widgets">
             <div class="MdMTMWidget01 ExSelected hide">
-              <%= form_for(@matome) do |f| %>
-                <%= render 'shared/error_messages', object: f.object %>
-
-                <%= f.label :title %>
-                <%= f.text_field :title, size: "50", placeholder: "まとめタイトルを入力 (50文字以内)" %>
-
-                <%= f.label :content %>
-                <%= f.text_area :content, placeholder: "*テキストを入力" %>
-
-                <%= f.submit "作成", class: "btn btn-large btn-primary" %>
-              <% end %>
             </div>
             <div class="MdMTMWidget01 ExSelected hide">
             </div>
@@ -68,22 +79,6 @@
   </div>
 </div>
 
-<div class="MdMTMEditHead01">
-  <div class="mdMTMEditHead01Inner">
-    <p class="mdMTMEditHead01Ttl">まとめ作成</p>
-    <p class="mdMTMEditHead01Btn">
-    <span class="MdBtn01SaveDraft01">
-      <input class="mdBtn01SaveDraft01Btn" type="button" value="下書き保存">
-    </span>
-    <span class="MdBtn01Publish01">
-      <input class="mdBtn01Publish01Btn" type="button" value="公開">
-    </span>
-    <span class="MdBtn01Cancel02">
-      <a class="mdBtn01Cancel02Btn" >キャンセル</a>
-    </span>
-    </p>
-  </div>
-</div>
 
 
 
