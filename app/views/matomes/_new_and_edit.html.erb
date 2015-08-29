@@ -11,6 +11,7 @@
             <%= image_tag @matome.image.url %>
           <% end %>
           <%= f.file_field :image %>
+          <%= f.text_field :remote_image_url, placeholder: "image url" %>
           <%= f.hidden_field :image_cache %>
 
           <% if @matome.persisted? && @matome.image? %>
