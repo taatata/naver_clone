@@ -57,7 +57,9 @@ class MatomesController < ApplicationController
       .permit(:title, :content, :image, :remote_image_url, :remove_image,
               blocks_attributes: [:id, :order,
                                     midasi_attributes: [:id, :content],
-                                    text_attributes: [:id, :content]])
+                                    text_attributes: [:id, :content],
+                                    mimage_attributes: [:id, :title, :q_url, :comment, :image, :remote_image_url, :remove_image]
+      ])
     end
 
 end

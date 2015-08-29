@@ -1,0 +1,14 @@
+<%= b.fields_for :mimage, @mimage = @block.build_mimage do |mimg| %>
+  <% if @mimage.image? %>
+    <%= image_tag @miamge.image.url %>
+  <% end %>
+  <%= mimg.file_field :image %>
+  <%= mimg.text_field :remote_image_url, placeholder: "image url" %>
+
+  <% if @mimage.persisted? && @mimage.image? %>
+    <%= mimg.check_box :remove_image %>
+    画像を削除
+  <% end %>
+  <%= mimg.text_field :title %>
+<% end %>
+

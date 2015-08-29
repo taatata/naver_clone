@@ -4,6 +4,8 @@ module BlocksHelper
       'midasis'
     elsif block.text
       'texts'
+    elsif block.mimage
+      'mimages'
     else
       nil
     end

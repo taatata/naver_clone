@@ -4,6 +4,7 @@ NaverClone::Application.routes.draw do
   resources :matomes
   resources :blocks
   resources :midasis
+  resources :mimages
 
   root 'matomes#index'
 
