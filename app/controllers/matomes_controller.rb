@@ -58,7 +58,8 @@ class MatomesController < ApplicationController
               blocks_attributes: [:id, :order,
                                     midasi_attributes: [:id, :content],
                                     text_attributes: [:id, :content],
-                                    mimage_attributes: [:id, :title, :q_url, :comment, :image, :remote_image_url, :remove_image]
+                                    mimage_attributes: [:id, :title, :q_url, :comment, :image, :remote_image_url, :remove_image],
+                                    quote_attributes: [:id, :quote, :q_url, :q_title, :comment]
       ])
     end
 

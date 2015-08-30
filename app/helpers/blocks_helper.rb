@@ -6,6 +6,8 @@ module BlocksHelper
       'texts'
     elsif block.mimage
       'mimages'
+    elsif block.quote
+      'quotes'
     else
       nil
     end
