@@ -59,7 +59,8 @@ class MatomesController < ApplicationController
                                     midasi_attributes: [:id, :content],
                                     text_attributes: [:id, :content],
                                     mimage_attributes: [:id, :title, :q_url, :comment, :image, :remote_image_url, :remove_image],
-                                    quote_attributes: [:id, :quote, :q_url, :q_title, :comment]
+                                    quote_attributes: [:id, :quote, :q_url, :q_title, :comment],
+                                    movie_attributes: [:id, :url, :q_url, :q_title, :comment]
       ])
     end
 

@@ -1,0 +1,17 @@
+<div class="mdMTMWidget01Content01 MdCF">
+  <div class="mdMTMWidget01ItemVideo01">
+    <p class="mdMTMWidget01ItemVideo01View">
+    <%= content_tag(
+      :iframe,
+      '', # empty body
+      width: 560,
+      height: 315,
+      src: "https://www.youtube.com/embed/" + block.movie.url.match(/v=(.*)/)[1],
+      #src: block.movie.url,
+      frameborder: 0,
+      allowfullscreen: true
+    ) %>
+  </p>
+  </div>
+</div>
+

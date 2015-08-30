@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150829160430) do
+ActiveRecord::Schema.define(version: 20150830142934) do
 
   create_table "blocks", force: true do |t|
     t.integer  "matome_id"
@@ -43,6 +43,16 @@ ActiveRecord::Schema.define(version: 20150829160430) do
     t.string   "image"
     t.string   "title"
     t.string   "q_url"
+    t.string   "comment"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "movies", force: true do |t|
+    t.integer  "block_id"
+    t.string   "url"
+    t.string   "q_url"
+    t.string   "title"
     t.string   "comment"
     t.datetime "created_at"
     t.datetime "updated_at"

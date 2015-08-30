@@ -8,6 +8,8 @@ module BlocksHelper
       'mimages'
     elsif block.quote
       'quotes'
+    elsif block.movie
+      'movies'
     else
       nil
     end
