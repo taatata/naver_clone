@@ -11,11 +11,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150830142934) do
+ActiveRecord::Schema.define(version: 20150830155952) do
 
   create_table "blocks", force: true do |t|
     t.integer  "matome_id"
     t.integer  "order"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "links", force: true do |t|
+    t.integer  "block_id"
+    t.string   "image"
+    t.string   "q_url"
+    t.string   "q_title"
+    t.string   "q_description"
+    t.string   "comment"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

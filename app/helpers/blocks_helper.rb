@@ -10,6 +10,8 @@ module BlocksHelper
       'quotes'
     elsif block.movie
       'movies'
+    elsif block.link
+      'links'
     else
       nil
     end
