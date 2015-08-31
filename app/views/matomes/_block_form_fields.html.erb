@@ -1,3 +1,8 @@
+<%= form_tag(links_path, method: 'post', remote: true) do %>
+  <%= text_field_tag (:q_url) %>
+  <%= submit_tag("チェック") %>
+<% end %>
+
 <%= form_for(@matome, remote: false) do |m| %>
 
   <%= render 'blocks/form_fields', m: m, name: name %>

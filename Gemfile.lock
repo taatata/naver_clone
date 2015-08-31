@@ -173,7 +173,7 @@ GEM
     turbolinks (2.5.3)
       coffee-rails
     tzinfo (0.3.44)
-    uglifier (2.7.1)
+    uglifier (2.7.2)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
     websocket (1.0.7)
@@ -199,6 +199,7 @@ DEPENDENCIES
   jquery-rails
   jquery-turbolinks
   jquery-ui-rails
+  nokogiri
   pry
   pry-debugger
   pry-doc

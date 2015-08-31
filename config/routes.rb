@@ -5,8 +5,9 @@ NaverClone::Application.routes.draw do
   resources :blocks
   resources :midasis
   resources :mimages
-  resources :quote
-  resources :movie
+  resources :quotes
+  resources :movies
+  resources :links
 
   root 'matomes#index'
 
