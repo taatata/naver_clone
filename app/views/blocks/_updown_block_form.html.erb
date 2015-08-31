@@ -1,6 +1,6 @@
 <div class="mdMTMWidget01Util01 hide">
   <div class="MdToolbar01">
-    <span class="mdToolbar01Up">上</span>
-    <span class="mdToolbar01Down">下</span>
+    <%= link_to "上", order_up_path(block_id: block.id), method: :post %>
+    <%= link_to "下", order_down_path(block_id: block.id), method: :post %>
   </div>
 </div>
