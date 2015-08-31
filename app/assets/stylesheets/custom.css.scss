@@ -270,3 +270,129 @@ h1, h2, h3, h4, h5, h6 {
     letter-spacing: -1px;
   }
 }
+
+.MdMTMWidget01 {
+  position: relative;
+  width: 635px;
+  margin: 0 0 35px 0;
+
+  .mdMTMWidget01Content01 {
+    position: relative;
+    width: 635px;
+  }
+
+  .mdMTMWidget01ItemTtl01View {
+    color: #000;
+    line-height: 1.3;
+    padding-bottom: 5px;
+    border-bottom: 2px solid #eaecee;
+    font-weight: bold;
+    font-size: 20px;
+    a {
+      padding: 2px 0;
+      color: #000;
+    }
+  }
+
+  .mdMTMWidget01ItemTtl01Link {
+    text-decoration: underline;
+  }
+
+  .mdMTMWidget01ItemUrl01View {
+    line-height: 1.2;
+    margin: 3px 0 0;
+    font-size: 11px;
+  }
+
+  .mdMTMWidget01ItemUrl01Link {
+    color: #7c94aa;
+    text-decoration: none;
+  }
+
+  .mdMTMWidget01ItemDesc01View {
+    line-height: 1.4;
+    margin: 3px 0 0;
+    color: #aaa;
+  }
+
+  .mdMTMWidget01ItemComment01View {
+    line-height: 1.429;
+    margin: 10px 0 0;
+    padding: 0 0 0 6px;
+    border-left: 2px solid #d0d0d0;
+    color: #666;
+    font-size: 14px;
+  }
+
+  .mdMTMWidget01ItemQuote01View {
+    position: relative;
+    line-height: 1.3;
+    color: #666;
+    font-weight: bold;
+    font-size: 20px;
+    text-indent: 22px;
+  }
+
+  .mdMTMWidget01ItemQuote01Ico {
+    position: absolute;
+    top: 3px;
+    left: 0;
+    width: 20px;
+    height: 17px;
+  }
+
+  .mdMTMWidget01ItemQuote01Txt {
+    quotes: none;
+  }
+
+  .mdMTMWidget01ItemOption01 {
+    margin-top: 7px;
+  }
+  .mdMTMWidget01ItemCite01View {
+    line-height: 1.2;
+    margin: 3px 0 0;
+    color: #aaa;
+  }
+
+  .mdMTMWidget01ItemCite01Label {
+    font-size: 11px;
+    float: left;
+    margin-right: 5px;
+  }
+
+  .mdMTMWidget01ItemCite01Value {
+    font-size: 11px;
+    display: block;
+    overflow: hidden;
+
+    a {
+      position: relative;
+      color: #aaa;
+      text-decoration: none;
+    }
+  }
+
+  .mdMTMWidget01ItemComment01View {
+    line-height: 1.429;
+    margin: 10px 0 0;
+    padding: 0 0 0 6px;
+    border-left: 2px solid #d0d0d0;
+    color: #666;
+    font-size: 14px;
+  }
+
+  .mdMTMWidget01ItemTxt01View {
+    line-height: 1.429;
+    color: #666;
+    font-size: 14px;
+  }
+}
+
+
+.mdMTMWidget01Content01Thumb {
+  float: left;
+  max-width: 300px;
+  margin: 0 10px 0 0;
+}
+
+
