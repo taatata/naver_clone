@@ -1,5 +1,5 @@
 <div class="MdMTMWidget01 mdMTMWidgetUtil01TypeTtl MdEditable02">
-  <%= render 'blocks/updown_block_form' %>
+  <%= render 'blocks/updown_block_form', block: block if @is_edit %>
   <%= render(has_one_name(block) + '/block', block: block) %>
-  <%= render 'blocks/edit_block_form' %>
+  <%= render 'blocks/edit_block_form', block: block if @is_edit %>
 </div>

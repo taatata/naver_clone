@@ -32,6 +32,7 @@ class MatomesController < ApplicationController
   def edit
     @matome = Matome.find(params[:id])
     @block = @matome.blocks.build
+    @is_edit = true
   end
 
   def update
