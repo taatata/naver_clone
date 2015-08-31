@@ -8,4 +8,8 @@ $(function() {
     $('.ExSelected').addClass('hide');
     $('.ExSelected').eq(index).removeClass('hide');
   });
+
+  $(".mdBtn01Cancel01Btn").click(function() {
+    location.reload();
+  })
 });

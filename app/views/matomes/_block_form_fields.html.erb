@@ -2,9 +2,10 @@
   <%= render "#{name}/check" %>
 </div>
 
-<div class="form <%= 'hide' if name.match(/links|mimages|movies/) %>">
+<div class="form <%= 'hide' if name.match(/links/) %>">
   <%= form_for(@matome, remote: false) do |m| %>
     <%= render 'blocks/form_fields', m: m, name: name %>
     <%= m.submit "保存" %>
+    <span class="MdBtn01Cancel01"><a class="mdBtn01Cancel01Btn" href="#">キャンセル</a></span>
   <% end %>
 </div>
