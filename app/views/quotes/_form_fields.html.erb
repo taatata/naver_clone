@@ -1,4 +1,7 @@
 <%= b.fields_for :quote, @block.build_quote do |q| %>
-  <%= q.text_field :quote %>
+  <%= q.text_area  :quote, placeholder: '引用を入力' %><br/>
+  <%= q.text_field :q_url, placeholder: '引用の出典元URLを入力(ウェブページの場合)'%><br/>
+  <%= q.text_field :q_title, placeholder: '引用の出典を入力'%><br/>
+  <%= q.text_area  :comment, placeholder: '引用の紹介コメントを入力'%><br/>
 <% end %>
 

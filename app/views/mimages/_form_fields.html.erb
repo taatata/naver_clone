@@ -2,13 +2,12 @@
   <% if @mimage.image? %>
     <%= image_tag @miamge.image.url %>
   <% end %>
-  <%= mimg.file_field :image %>
-  <%= mimg.text_field :remote_image_url, placeholder: "image url" %>
+  <%= mimg.file_field :image %><br/>
+  <%= mimg.text_field :remote_image_url, placeholder: "image url" %><br/>
 
   <% if @mimage.persisted? && @mimage.image? %>
     <%= mimg.check_box :remove_image %>
     画像を削除
   <% end %>
-  <%= mimg.text_field :title %>
 <% end %>
 

@@ -1,7 +1,27 @@
 <div class="mdMTMWidget01Content01 MdCF">
   <div class="mdMTMWidget01ItemQuote01">
     <p class="mdMTMWidget01ItemQuote01View">
-    <%= block.quote.quote %>
+    <span class="mdMTMWidget01ItemQuote01Ico"></span>
+    <q class="mdMTMWidget01ItemQuote01Txt"><%= block.quote.quote %></q>
+    </p>
+  </div>
+  <div class="mdMTMWidget01ItemOption01">
+    <div class="mdMTMWidget01ItemCite01">
+      <p class="mdMTMWidget01ItemCite01View">
+      <span class="mdMTMWidget01ItemCite01Label">出典</span>
+      <span class="mdMTMWidget01ItemCite01Value">
+        <a href="<%= block.quote.q_url%>" target="_blank">
+          <span class="mdMTMWidget01ItemCite01Txt">
+            <%= block.quote.q_title %>
+          </span>
+        </a>
+      </span>
+      </p>
+    </div>
+  </div>
+  <div class="mdMTMWidget01ItemComment01">
+    <p class="mdMTMWidget01ItemComment01View">
+    <%= block.quote.comment %>
     </p>
   </div>
 </div>

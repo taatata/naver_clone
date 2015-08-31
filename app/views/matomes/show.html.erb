@@ -1,1 +1,16 @@
-<%= @matome.title %>, <%= @matome.content %>, <%= @matome.user_id %>
+<div class="MdHeading01 MdCF">
+  <div class="mdHeading01Main mdHeading01MainWithThumb">
+    <div class="mdHeading01Thumb">
+      <div class="mdHeading01Txt">
+        <h1 class="mdHeading01Ttl">
+          <%= link_to @matome.title, @matome %>
+        </h1>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="matomecontents">
+  <% @matome.blocks.order(:order).each do |b| %>
+    <%= render 'blocks/edit_block', block: b %>
+  <% end %>
+</div>
