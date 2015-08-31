@@ -1,4 +1,7 @@
 <%= b.fields_for :link, @block.build_link do |link| %>
-  <%= link.text_field :q_url, placeholder: '追加するリンクのURLを入力'%>
+  <%= link.text_field :q_title,       class: 'links-title'%>
+  <%= link.text_field :q_url,         class: 'links-url', readonly: true %>
+  <%= link.text_field :q_description, class: 'links-description'%>
+  <%= link.text_area  :comment,       class: 'links-comment'%>
 <% end %>
 

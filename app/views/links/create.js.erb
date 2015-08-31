@@ -1,1 +1,7 @@
-$(".matomecontents").prepend("<%= @ogp[:title] %>");
+$(".check").addClass("hide");
+$(".form").removeClass("hide");
+
+$(".links-title").val("<%= escape_javascript(@ogp[:title])%>")
+$(".links-url").val("<%= escape_javascript(@ogp[:url])%>")
+$(".links-description").val("<%= escape_javascript(@ogp[:description])%>")
+$(".links-comment").val("<%= escape_javascript(@ogp[:comment])%>")

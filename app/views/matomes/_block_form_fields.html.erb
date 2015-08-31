@@ -1,12 +1,10 @@
-<%= form_tag(links_path, method: 'post', remote: true) do %>
-  <%= text_field_tag (:ogp_url) %>
-  <%= submit_tag("チェック") %>
-<% end %>
+<div class="check <%= name %>">
+  <%= render "#{name}/check" %>
+</div>
 
-<%= form_for(@matome, remote: false) do |m| %>
-
-  <%= render 'blocks/form_fields', m: m, name: name %>
-
-  <%= m.submit "保存" %>
-<% end %>
-
+<div class="form <%= 'hide' if name.match(/links|mimages|movies/) %>">
+  <%= form_for(@matome, remote: false) do |m| %>
+    <%= render 'blocks/form_fields', m: m, name: name %>
+    <%= m.submit "保存" %>
+  <% end %>
+</div>

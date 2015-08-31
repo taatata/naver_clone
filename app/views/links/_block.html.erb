@@ -1,7 +1,24 @@
+<% l = block.link %>
+
 <div class="mdMTMWidget01Content01 MdCF">
-  <div class="mdMTMWidget01ItemLink01">
-    <p class="mdMTMWidget01ItemLink01View">
-    <%= block.link.q_url %>
+  <div class="mdMTMWidget01ItemTtl01">
+    <p class="mdMTMWidget01ItemTtl01View">
+    <a href="<%= l.q_url %>" class="mdMTMWidget01ItemTtl01Link" target="_blank"><%= l.q_title %></a>
+    </p>
+  </div>
+  <div class="mdMTMWidget01ItemUrl01">
+    <p class="mdMTMWidget01ItemUrl01View">
+    <a href="<%= l.q_url %>" class="mdMTMWidget01ItemUrl01Link" target="_blank"><%= l.q_url %></a>
+    </p>
+  </div>
+  <div class="mdMTMWidget01ItemDesc01">
+    <p class="mdMTMWidget01ItemDesc01View">
+    <%= l.q_description %>
+    </p>
+  </div>
+  <div class="mdMTMWidget01ItemComment01">
+    <p class="mdMTMWidget01ItemComment01View">
+    <%= l.comment %>
     </p>
   </div>
 </div>

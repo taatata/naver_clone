@@ -1,0 +1,4 @@
+<%= form_tag(links_path, method: 'post', remote: true) do %>
+  <%= text_field_tag :ogp_url, '', placeholder: '追加するリンクのURLを入力', class: 'mdMTMWidget01FormAdd01UrlInputbox required url' %>
+  <%= submit_tag("チェック") %>
+<% end %>
